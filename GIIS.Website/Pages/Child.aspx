@@ -472,7 +472,13 @@
                             <asp:TextBox ID="txtNotes" runat="server" CssClass="form-control" />
                           </div>
                           <div class="col m4 offset-s4">
+<<<<<<< HEAD
 
+=======
+                               <asp:Button ID="btnAdd" runat="server" Text="Save" CssClass="btn btn-primary btn-raised" OnClick="btnAdd_Click" OnClientClick="if (!checkHFacility()) return false;" ValidationGroup="saveChild" />
+            <asp:Button ID="btnEdit" runat="server" Text="Save" CssClass="btn btn-primary btn-raised" OnClick="btnEdit_Click" OnClientClick="if (!checkHFacility()) return false;" ValidationGroup="saveChild" />
+                                 <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" />
+>>>>>>> fdf0b5f164d486acbca348dc2fb1371b2c2df51b
                           </div>
                       </div>
                           
@@ -554,7 +560,7 @@
             </div>
             <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
                 <div class="form-group">
-                    <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" />
+                 
                 </div>
             </div>
         </asp:Panel>
@@ -602,8 +608,7 @@
         </div>
         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 clearfix">&nbsp;</div>
         <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Button ID="btnAdd" runat="server" Text="Save" CssClass="btn btn-primary btn-raised" OnClick="btnAdd_Click" OnClientClick="if (!checkHFacility()) return false;" ValidationGroup="saveChild" />
-            <asp:Button ID="btnEdit" runat="server" Text="Save" CssClass="btn btn-primary btn-raised" OnClick="btnEdit_Click" OnClientClick="if (!checkHFacility()) return false;" ValidationGroup="saveChild" />
+           
         </div>
         <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix">&nbsp;</div>
         <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
