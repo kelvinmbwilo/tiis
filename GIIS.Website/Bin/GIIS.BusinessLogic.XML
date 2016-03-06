@@ -9,6 +9,14 @@
             Illegal state exception indicates an operation failed because of an illegal state guard condition
             </summary>
         </member>
+        <member name="M:GIIS.BusinessLogic.Exceptions.IllegalStateException.#ctor(GIIS.BusinessLogic.OrderStatusType,System.String,System.String)">
+            <summary>
+            Creates a new instance of the <see cref="T:GIIS.BusinessLogic.Exception.IllegalStateException"/> class
+            </summary>
+            <param name="currentState">The current state of the object that caused the exception</param>
+            <param name="className">The name of the class in the state which caused the exception</param>
+            <param name="action">The name of the action which caused the exception</param>
+        </member>
         <member name="P:GIIS.BusinessLogic.Exceptions.IllegalStateException.CurrentState">
             <summary>
             The current state which caused the exception
@@ -23,14 +31,6 @@
             <summary>
             Gets the attempted action that caused the exception
             </summary>
-        </member>
-        <member name="M:GIIS.BusinessLogic.Exceptions.IllegalStateException.#ctor(GIIS.BusinessLogic.OrderStatusType,System.String,System.String)">
-            <summary>
-            Creates a new instance of the <see cref="T:GIIS.BusinessLogic.Exception.IllegalStateException"/> class
-            </summary>
-            <param name="currentState">The current state of the object that caused the exception</param>
-            <param name="className">The name of the class in the state which caused the exception</param>
-            <param name="action">The name of the action which caused the exception</param>
         </member>
         <member name="T:GIIS.BusinessLogic.OrderManagementLogic">
             <summary>

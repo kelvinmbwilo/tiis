@@ -18,7 +18,7 @@
 <%@ Page Title="Scheduled Vaccinationt List" Language="C#" MasterPageFile="~/Pages/MasterPage.master" AutoEventWireup="true" CodeFile="ScheduledVaccinationList.aspx.cs" Inherits="Pages_ScheduledVaccinationList" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="row">
+   <!-- <div class="row">
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
             <ol class="breadcrumb">
                 <li><a href="Default.aspx">Home</a></li>
@@ -27,29 +27,49 @@
                     <asp:Label ID="lblTitle" runat="server" Text="Scheduled Vaccinations" /></li>
             </ol>
         </div>
-    </div>
+    </div>   -->
+
+            <!-- New Schedule Card Start Here! -->
+
     <div class="row">
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix">
-            <asp:Label ID="lblName" runat="server" Text="Name" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtName" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix">
-            <asp:Label ID="lblCode" runat="server" Text="Code" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtCode" runat="server" CssClass="form-control" />
+        <div class="card" style="margin-left: 30px !important; margin-right: 30px !important">
+            <div class="card-content">
+                <span class="card-title">Search Filters</span>
+                <div class="row row-sm">
+                    <div class="col m12">
+                        <div class="col m3">
+                            <asp:Label ID="lblName" runat="server" Text="Name" CssClass=""  />
+                            <asp:TextBox ID="txtName" runat="server" CssClass="input-field" />
+                        </div>
+                       <div class="col m3 offset-s3">
+                           <asp:Label ID="lblCode" runat="server" Text="Code" />
+                           <asp:TextBox ID="txtCode" runat="server" CssClass="input-field" />
+                       </div>
+
+                        <!--This will handle all the logic for the Card including errors and Search-->
+                        <!-- This is for Search functionality-->
+                        <div class="row">
+                           <div class="col-md-5 col-xs-5 col-sm-5 col-lg-5 clearfix">&nbsp;</div>
+                            <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
+                           <asp:Button ID="Button1" runat="server" Text="Search" CssClass="btn btn-primary btn-raised" OnClick="btnSearch_Click" />
+                          </div>
+                       </div>
+             <br />
+
+             <!-- This is for incase there is no any search record-->
+                <div class="row">
+                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 clearfix"></div>
+                <div class="col-md-7 col-xs-7 col-sm-7 col-lg-7 clearfix">
+                <asp:Label ID="Label1" runat="server" Text="There are no scheduled vaccinations that match your search criteria!" CssClass="label label-warning" Font-Size="Small" Visible="false" />
+               </div>
+              </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <br />
-    <div class="row">
+   <!-- <div class="row">
         <div class="col-md-5 col-xs-5 col-sm-5 col-lg-5 clearfix">&nbsp;</div>
         <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
             <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-primary btn-raised" OnClick="btnSearch_Click" />
@@ -61,8 +81,9 @@
         <div class="col-md-7 col-xs-7 col-sm-7 col-lg-7 clearfix">
             <asp:Label ID="lblWarning" runat="server" Text="There are no scheduled vaccinations that match your search criteria!" CssClass="label label-warning" Font-Size="Small" Visible="false" />
         </div>
-    </div>
+    </div>-->
     <br />
+
     <div class="row">
         <div class="col-md-10 col-xs-10 col-sm-10 col-lg-10 clearfix">
         </div>
@@ -70,8 +91,15 @@
             <asp:Button ID="btnAddNew" runat="server" Text="Add New" CssClass="btn btn-material-bluegrey btn-raised btn-sm" Visible="false"  OnClick="btnAddNew_Click" />
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
+
+
+    <!--This Card is for showing all information for ScheduledVaccinationList based on the Search Card-->
+        <div class="card" style="margin-left: 30px !important; margin-right: 30px !important;">
+
+            <div class="card-content">
+                <span class="card-title">Schedule Vaccination List</span>
+                <div class="table-responsive">
+                     <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
             <asp:GridView ID="gvScheduledVaccination" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered table-hover table-responsive" AllowPaging="True" OnDataBound="gvScheduledVaccination_DataBound" OnRowDataBound="gvScheduledVaccination_RowDatabound" OnPageIndexChanging="gvScheduledVaccination_PageIndexChanging">
                 <PagerSettings Position="Top" Mode="NumericFirstLast" />
                 <PagerStyle CssClass="pagination" HorizontalAlign="Left" VerticalAlign="Top" />
@@ -109,12 +137,17 @@
             </asp:ObjectDataSource>
         </div>
     </div>
+                <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix">
+            <asp:Button ID="btnExcel" runat="server" Text="Excel" Visible="false" CssClass="btn btn-success btn-raised" OnClick="btnExcel_Click" />
+        </div>
+                </div>
+            </div>
+       
+       
     <div class="row">
         <div class="col-md-10 col-xs-10 col-sm-10 col-lg-10 clearfix">
         </div>
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix">
-            <asp:Button ID="btnExcel" runat="server" Text="Excel" Visible="false" CssClass="btn btn-success btn-raised" OnClick="btnExcel_Click" />
-        </div>
+        
         <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
     </div>
     <div class="row" style="overflow: auto">

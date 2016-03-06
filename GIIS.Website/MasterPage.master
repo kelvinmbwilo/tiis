@@ -7,14 +7,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Immunization Information System</title>
+  
+    <title>Tanzania Immunization Register</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="css/nprogress.css" rel="stylesheet" />
-    <link href="css/ripples.css" rel="stylesheet" />
-    <link href="css/material.css" rel="stylesheet" />
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.css" rel="stylesheet"/>-->
 
+    <!-- Custom styles for this template -->
+   <!-- <link href="css/nprogress.css" rel="stylesheet" />
+    <link href="css/ripples.css" rel="stylesheet" />
+    <link href="css/material.css" rel="stylesheet" /> -->
+    <link type="text/css" href="css/materialize.min.css" rel="stylesheet"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!--  <link rel="stylesheet" href="css/custom.css"/> -->
+    <link rel="stylesheet" href="css/color.css"/>
+    <link rel="stylesheet" href="css/mega-menu.css"/>
+    <link rel="stylesheet" href="css/materialize.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/owl.slider.css" />
+    <link rel="stylesheet" href="css/tiis.css" />
+    <link rel="stylesheet" href="Content/materialize/font/material-design-icons/Material-Design-Icons.eot" />
+    <link rel="stylesheet" href="css/abn_tree.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -24,46 +38,103 @@
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 462px;
+            height: 453px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="server"></ajaxToolkit:ToolkitScriptManager>
 
+        
         <!-- GIIS start here -->
-        <div class="container">
+        <div id="wrapper" class="">
+            <div id="cp-header" class="cp-header">
+                <div class="cp-topbar">
+                    <div class="container no-pad">
+                        <div class="row">
+                            <div class="col-md-6 pull-left">
+                               
+                                <ul class="toplinks">
+                                    
+                                    <l class=""> <h6 style="color: white">Tanzania Immunization Register System</h6></l>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+        <!--Logo brand-->
+    <!--    <div class="cp-logo-row" style="background-color: #007fd1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="logo">
+                            <a><img style="height: 70px; width: 70px" src="img/uhurunaumoja.png" alt=""/></a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <p style="text-align: center">
+                             <h4 class="col-md-offset-2" style="font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, FreeSerif, serif; color: #ffffff"> Ministry Of Health And Social Wellfare </h2>
+                <h6 class="col-md-offset-5" style="font-family: 'Palatino Linotype'; color: white"> Immunization and Vaccine Development </h4>
+                        </p>
+                    </div>
+                    <br />
+                    <br /><br /><br />
+                    <div class="col-md-2 pull-right">
+                        <div class="logo pull-right">
+                            <a><img style="height: 70px; width: 70px" src="img/tanzaniaflagmap.png"/></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+       <!-- <div class="container">
              <div class="row">
-                 <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3"></div> 
+                 <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3"></div> -->
                 <!--Header Container-->
-                <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
+             <!--   <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6">
                     <br />
                     <img src="img/logo_tiis.png" alt="GIIS" />
                     <br />
-                </div>
-      
-                   <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3"></div> 
-                </div>
-          
+                </div>-->
+                 <!--Header Container-->
 
-            <div class="row">
-                 <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3">
+             <!-- TImR Start Here-->
+             <div>
+                 <div class="col-m12 col-l12 col-s12 col-x12" style="height: 30px"></div>
+                <div class="row no-padding">
+                     <div class="col-m3 col-x3 col-s3 col-l3 hidden">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                   <!-- <div class="col-md-offset-1 col-md-4 col-lg-4 col-sm-4">
+                        <img class="auto-style1" src="http://localhost:15043/img/tz_lg.jpg" /> 
+                    </div> -->
 
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
-                <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4" style="margin-left:100px">
-                    <giis:LogIn ID="logIn1" runat="server" />
-                </div>
-               <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2">
-               
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
+                    <div class="col m6 offset-s1">
+                        <img class="auto-style1" src="http://localhost:15043/img/tz_lg.jpg" /> 
+                    </div>
+                    <div class="col m4 x4 s4 l4" style="margin-left: 100px" >
+                        <giis:LogIn ID="logIn1" runat="server" />
+                    </div>
+                    
+                   <div class="col-m4 col-x4 col-s4 col-l4 ">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>  
             </div>
-
             <hr />
             <div class="footer">
                 <!--Footer-->
-                <%--<p>&copy; Immunization Information System 2.0 2014</p>--%>
+                <p>&copy Immunization Information System 3.0 2016</p>
             </div>
             <!--/Footer-->
 
@@ -77,6 +148,11 @@
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="js/jquery.min.js"></script>
+
+        <!-- jQuery (necessary for materializecss JavaScript plugins)-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script type="text/javascript" src="js/AutoCompletescript.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>

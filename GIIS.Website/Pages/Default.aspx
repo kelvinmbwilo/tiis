@@ -22,19 +22,18 @@
 <%@ Register Src="~/UserControls/OrderAlert.ascx" TagName="OrderAlert" TagPrefix="giis" %>
 <%@ Register Src="~/UserControls/ItemLotsToExpire.ascx" TagName="ItemLotsToExpire" TagPrefix="giis" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-</asp:Content>
+</asp:Content> 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="row">
+   <div class="row">
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
             <ol class="breadcrumb">
-                <li class="active"><a href="Default.aspx">Home</a></li>
+            <!--    <li class="active"><a href="Default.aspx">Home</a></li> -->
             </ol>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
+    </div> 
+     <div class="row">
+        <div class="col m12 x12 s12 l12 clearfix">
             <asp:Chart ID="Chart1" runat="server" Width="850px" Palette="Pastel"                                                                                         >
                 <Series>
                     <asp:Series Name="Series1"></asp:Series>
@@ -53,7 +52,13 @@
             </asp:Chart>
 
         </div>
-    </div>
+    </div> 
+
+
+
+
+
+
     <br />
     <br />
     <div class="row">

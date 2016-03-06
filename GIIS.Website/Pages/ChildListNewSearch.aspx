@@ -18,7 +18,7 @@
 <%@ Page Title="Search Children" Language="C#" MasterPageFile="~/Pages/MasterPage.master" AutoEventWireup="true" CodeFile="ChildListNewSearch.aspx.cs" Inherits="Pages_ChildListNewSearch" EnableEventValidation="false" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="row">
+   <!-- <div class="row">
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
             <ol class="breadcrumb">
                 <li><a href="Default.aspx">Home</a></li>
@@ -27,7 +27,7 @@
                     <asp:Label ID="lblTitle" runat="server" Text="Search Children" /></li>
             </ol>
         </div>
-    </div>
+    </div> -->
     <br />
     <div class="row">
       <%--  <div class="col-md-6 col-xs-6 col-sm-6 col-lg-6 clearfix">
@@ -44,8 +44,14 @@
             <asp:Label ID="lblWarning" runat="server" Text="There are no children that match your search criteria!" CssClass="label label-warning" Font-Size="Small" Visible="false" />
         </div>
     </div>
-
+    
+    <!-- Div ya Search Paginnation Results zinaanzia Hapa! -->
     <div class="row">
+        <div class="card" style="margin-right: 30px !important; margin-left: 30px !important;">
+            <div class="card-content">
+                <div class="card-title">
+                    <span>Children List</span>
+                </div>
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix" style="overflow:auto">
             <asp:GridView ID="gvChild" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered table-hover table-responsive" 
                 AllowPaging="True" OnDataBound="gvChild_DataBound" OnPageIndexChanging="gvChild_PageIndexChanging">
@@ -138,8 +144,10 @@
                     <asp:Parameter  Name="domicileId" Type="Int32" />
                 </SelectParameters>
             </asp:ObjectDataSource>
+         </div>
         </div>
-    </div>
+       </div>
+    </div> <!-- Div ya Paginnation inaishia Hapa! -->
 
     <br />
     <div class="row">

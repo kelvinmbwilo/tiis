@@ -18,7 +18,7 @@
 <%@ Page Title="User" Language="C#" MasterPageFile="~/Pages/MasterPage.master" AutoEventWireup="true" CodeFile="EditUser.aspx.cs" Inherits="Pages_EditUser" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="row">
+ <!--   <div class="row">
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
             <ol class="breadcrumb">
                 <li><a href="Default.aspx">Home</a></li>
@@ -27,117 +27,98 @@
                     <asp:Label ID="lblTitle" runat="server" Text="Edit User" /></li>
             </ol>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblUsername" runat="server" Text="Username" />
-            <span style="color: Red">&nbsp;*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblHealthFacilityId" runat="server" Text="HealthFacilityId" />
-            <span style="color: Red">&nbsp; *</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <uc1:AutoCompleteTextbox runat="server"
-                    ID="txtHealthFacilityId"
-                    OnClickSubmit="true"
-                    ServiceMethod="HealthCentersUser"
-                    HighlightResults="true"
-                    ClearAfterSelect="false" OnValueSelected="HealthCenters_ValueSelected" />
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblRole" runat="server" Text="Role"></asp:Label>
-            <span style="color: Red">&nbsp; *</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:DropDownList ID="ddlRole" runat="server" CssClass="form-control" DataSourceID="odsRole" DataTextField="Name" DataValueField="Id"></asp:DropDownList>
-                <asp:ObjectDataSource ID="odsRole" runat="server" SelectMethod="GetRoleList" TypeName="GIIS.DataLayer.Role"></asp:ObjectDataSource>
-            </div>
-        </div>
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblEmail" runat="server" Text="Email" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblFirstname" runat="server" Text="Firstname" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtFirstname" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblLastname" runat="server" Text="Lastname" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtLastname" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblNotes" runat="server" Text="Notes" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtNotes" runat="server" CssClass="form-control" />
+    </div> -->
 
-            </div>
-        </div>
-        <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
-        <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblIsActive" runat="server" Text="IsActive" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:RadioButtonList ID="rblIsActive" runat="server" RepeatDirection="Horizontal">
-                    <asp:ListItem Selected="True" Value="True" Text="Yes&nbsp;&nbsp;&nbsp;"></asp:ListItem>
-                    <asp:ListItem Value="False" Text="No"></asp:ListItem>
-                </asp:RadioButtonList>
+    <!-- This card for user profile start Here! -->
+    <div class="row">
+        <div class="card" style="margin-left: 13px !important; margin-right: 30px !important;">
+            <div class="card-content">
+                <span class="card-title" style="padding-left: 25px">User Profile</span>
+
+                <div class="row row-sm">
+                    <div class="col m12">
+                        <div class="col m4">
+                            <asp:Label ID="lblUsername" runat="server" Text="Username" />
+                            <span style="color: Red">&nbsp;*</span>
+                             <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" />
+                        </div>
+                        <div class="col m4 offset-s3">
+                             <asp:Label ID="lblHealthFacilityId" runat="server" Text="HealthFacilityId" />
+                             <span style="color: Red">&nbsp; *</span>
+                             <div class="form-group">
+                            <uc1:AutoCompleteTextbox runat="server"
+                                ID="txtHealthFacilityId"
+                                OnClickSubmit="true"
+                                ServiceMethod="HealthCentersUser"
+                                HighlightResults="true"
+                                ClearAfterSelect="false" OnValueSelected="HealthCenters_ValueSelected" />
+                            </div>
+                        </div>
+                        
+                            <div class="col m4 offset-s2">
+                                <asp:Label ID="lblRole" runat="server" Text="Role"></asp:Label>
+                                <span style="color: Red">&nbsp; *</span>
+                                 <asp:DropDownList ID="ddlRole" runat="server" CssClass="form-control" DataSourceID="odsRole" DataTextField="Name" DataValueField="Id"></asp:DropDownList>
+                                 <asp:ObjectDataSource ID="odsRole" runat="server" SelectMethod="GetRoleList" TypeName="GIIS.DataLayer.Role"></asp:ObjectDataSource>
+                            </div>
+                            <div class="col m4 ">
+                                  <asp:Label ID="lblEmail" runat="server" Text="Email" />
+                                  <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" />
+                            </div>
+                            <div class="col m3 offset-s4">
+                                 <asp:Label ID="lblFirstname" runat="server" Text="Firstname" />
+                                 <asp:TextBox ID="txtFirstname" runat="server" CssClass="form-control" />
+                            </div>
+                            <div class="col m3 offset-4">
+                                 <asp:Label ID="lblLastname" runat="server" Text="Lastname" />
+                                  <asp:TextBox ID="txtLastname" runat="server" CssClass="form-control" />
+                            </div>
+                           <div class="col m3 offset-s4">
+                                <asp:Label ID="lblNotes" runat="server" Text="Notes" />
+                                 <asp:TextBox ID="txtNotes" runat="server" CssClass="form-control" />
+                           </div>
+                           <div class="col m3">
+                                <asp:Label ID="lblIsActive" runat="server" Text="IsActive" />
+                                <asp:RadioButtonList ID="rblIsActive" runat="server" RepeatDirection="Horizontal">
+                                    <asp:ListItem Selected="True" Value="True" Text="Yes&nbsp;&nbsp;&nbsp;"></asp:ListItem>
+                                    <asp:ListItem Value="False" Text="No"></asp:ListItem>
+                                </asp:RadioButtonList>
+                           </div>
+                          <div class="col m4 offset-s3">
+                               <asp:Label ID="lblNewPassword" runat="server" Text="New Password" BackColor="LightGray"></asp:Label>
+                               <asp:TextBox ID="txtNewPassword" runat="server" CssClass="form-control" MaxLength="15" TextMode="Password" />
+                          </div>
+                          <div class="col m4 offset-s3">
+                                <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password" BackColor="LightGray"></asp:Label>
+                                 <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" MaxLength="15" TextMode="Password" />
+                          </div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    
+           
+      
     <div class="row">
         <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
         <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblNewPassword" runat="server" Text="New Password" BackColor="LightGray"></asp:Label>
+           
         </div>
         <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
             <div class="form-group">
-                <asp:TextBox ID="txtNewPassword" runat="server" CssClass="form-control" MaxLength="15" TextMode="Password" />
+                
             </div>
         </div>
         <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
         <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Label ID="lblConfirmPassword" runat="server" Text="Confirm Password" BackColor="LightGray"></asp:Label>
+          
         </div>
         <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
             <div class="form-group">
-                <asp:TextBox ID="txtConfirmPassword" runat="server" CssClass="form-control" MaxLength="15" TextMode="Password" />
+               
             </div>
         </div>
     </div>

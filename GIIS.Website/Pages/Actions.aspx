@@ -36,7 +36,7 @@
                 </td>
                 <td>
                     <asp:RequiredFieldValidator ID="rfvName" runat="server" ErrorMessage="This field must be filled!" ControlToValidate="txtName" ValidationGroup="saveActions" Display="Dynamic" ForeColor="Red" />
-                </td>
+                </td>             
             </tr>
             <tr>
                 <td>

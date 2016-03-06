@@ -21,16 +21,54 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div class="row">
-        <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
+      <!--  <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
             <ol class="breadcrumb">
                 <li><a href="Default.aspx">Home</a></li>
                 <li><a href="#">Child</a></li>
                 <li class="active">
                     <asp:Label ID="lblTitle" runat="server" Text="Find Duplications" /></li>
             </ol>
+        </div> -->
+    </div>
+
+    <!-- Page ya materialize Duplicates inaanzia Hapa! -->
+    <div class="box-row">
+        <div class="row">
+            <div class="col l12 m12 s12">
+                <div class="card" style="margin-left: 30px !important; margin-left: 30px !important;">
+                    <div class="card-content">
+                        <span class="card-title"> Find Duplicates </span>
+                        <br /> <br />
+                           <div class="row">
+                              <div class="col m1 x1 s1 l1 clearfix"></div>
+                              <div class="col s12 clearfix">
+                              <asp:CheckBox ID="chbLastnamemain" runat="server" CssClass="col s2" Text="Lastname" Checked="True" Enabled="False" />
+                              <asp:CheckBox ID="chbFirstnamemain" runat="server" Text="Firstname" CssClass="col s2 " />
+                              <asp:CheckBox ID="chbBirthdatemain" runat="server" Text="Birthdate" CssClass="col s2 "/>
+                              <asp:CheckBox ID="chbGendermain" runat="server" Text="Gender" CssClass="col s2" />
+                              <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-primary btn-sm btn-raised " OnClick="btnSearch_Click"  />
+                              </div>
+                              <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 clearfix">
+                            
+
+                             <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
+                             <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
+                             
+                             </div>
+                            <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
+                            
+                            </div>
+
+                     </div>
+                 </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
+
+
+  <!--  <div class="row">
         <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
         <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
             <asp:CheckBox ID="chbLastname" runat="server" Text="Lastname" Checked="True" Enabled="False" />
@@ -48,7 +86,7 @@
             <asp:CheckBox ID="chbGender" runat="server" Text="Gender" />
         </div>
     </div>
-    <br />
+    <br /> -->
     <div class="row">
         <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix"></div>
         <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8 clearfix">
@@ -61,7 +99,7 @@
         <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix"></div>
         <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
             <br />
-            <asp:Button ID="btnSearch" runat="server" Text="Search" CssClass="btn btn-primary btn-sm btn-raised" OnClick="btnSearch_Click" />
+            
         </div>
     </div>
     <br />

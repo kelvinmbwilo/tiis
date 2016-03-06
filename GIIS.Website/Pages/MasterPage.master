@@ -9,13 +9,39 @@
 <head id="Head1" runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Immunization Information System</title>
+    <link href="../css/custom.css" rel="stylesheet" />
+    <link href="../css/materialize.css" rel="stylesheet" />
+    <link href="../css/materialize.min.css" rel="stylesheet" />
+    <link href="../css/iconmoon.css" rel="stylesheet" />
+    <link href="../css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../css/owl.slider.css" rel="stylesheet" />
+    <link href="../css/custom.css" rel="stylesheet" />
+    <link href="../css/tiis.css" rel="stylesheet" />
+    <link href="../css/mega-menu.css" rel="stylesheet" />
+    <link href="../css/nprogress.css" rel="stylesheet" />
+    <link href="../css/color.css" rel="stylesheet" />
+    <link href="../css/owl.slider.css" rel="stylesheet" />
+    <link href="../css/animate.css" rel="stylesheet" />
     <!-- Bootstrap -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+  <!--  <link href="../css/bootstrap.min.css" rel="stylesheet" /> -->
     <!-- Custom styles for this template -->
-    <link href="../css/material-wfont.min.css" rel="stylesheet" />
+    <!--<link href="../css/material-wfont.min.css" rel="stylesheet" />
     <link href="../css/nprogress.css" rel="stylesheet" />
     <link href="../css/ripples.css" rel="stylesheet" />
     <link href="../css/material.css" rel="stylesheet" />
+     <!-- <link href="css/nprogress.css" rel="stylesheet" />
+    <link href="css/ripples.css" rel="stylesheet" /> -->
+    <!-- <link href="css/material.css" rel="stylesheet" />
+    <link type="text/css" href="css/materialize.min.css" rel="stylesheet"  media="screen,projection"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+     <link rel="stylesheet" href="css/custom.css"/> 
+    <link rel="stylesheet" href="css/color.css"/>
+    <link rel="stylesheet" href="css/mega-menu.css"/>
+    <link rel="stylesheet" href="css/materialize.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/owl.slider.css" />
+    <link rel="stylesheet" href="css/tiis.css" />
+    <link rel="stylesheet" href="css/abn_tree.css" />
 
     <script type="text/javascript" src="../js/AutoCompletescript.js"></script>
 
@@ -33,26 +59,63 @@
 </head>
 <body>
     <form id="form1" runat="server">
+
+         
+        <!-- GIIS start here -->              
+        <div class="cp-logo-row"  style="background: #007fd1;padding:5px">
+                          <div class="row" style="margin:0px">
+                             <div class="row">
+                                    <div class="col m2" style="margin-left:25px">
+                                        <img style="height: 70px; width: 70px" src="../img/uhurunaumoja.png" alt="">
+                                    </div>
+                                     <div class="col m8">
+                                        <h4 class="center-align" style="font-family: 'Roboto',sans-serif; color: #ffffff; margin-top: 0px;"> Ministry Of Health And Social Wellfare </h4>
+                                        <h6 class="center-align" style="font-family: 'Roboto',sans-serif; color: white">Immunization and Vaccine Development </h6>
+                                     </div>
+                                    <div class="col m1 right hide-on-med-and-down">
+                                        <img style="height: 70px; width: 70px; " src="../img/tanzaniaflagmap.png" />
+                                    </div>
+                             </div>
+                          </div>
+                      </div>
+               
+
+
+
+
+
+
+
+
+
+
+
+
+
         <ajaxToolkit:ToolkitScriptManager ID="ScriptManager1" runat="server"></ajaxToolkit:ToolkitScriptManager>
         <!-- container -->
-        <div class="container">
+     <!--   <div class="container">
             <div class="row">
                 <!--Header Container-->
-                <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+               <!-- <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
                     <br />
                     <a runat="server" href="Default.aspx">
                         <img src="../img/logo_tiis_.png" alt="Home" title="Home" /></a> 
                     <br />
                 </div>
-            </div>
+            </div> -->
             <!--/Header Container-->
 
+
+             <!--TImR Container-->
+
+
             <!--Menu Container-->
-            <div class="col-">
+            <!--<div class="col-">
                 <nav class="navbar navbar-default" style="background-color:green" role="navigation">
                     <div class="container-fluid">
                         <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
+                <!--        <div class="navbar-header">
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
@@ -60,10 +123,159 @@
                                 <span class="icon-bar"></span>
                             </button>
 
+                        </div> -->
+
+                      <!-- Code Ninja Main Menu Bar-->
+                    <div class="cp-megamenu" style="height: 52px !important; ">
+                        <div class="">
+                            <div class="row">
+                                <div class="col m12 card" style="margin:0px">
+                                   <div class="cp-mega-menu" style="margin-left: 0px;">
+                                       <label for="mobile-button"> <i class="fa fa-bars"></i></label>
+
+                                       <input id="mobile-button" type="checkbox"/>
+                                       <ul class="collapse main-menu">
+                                          <li class="slogo"><a href="Default.aspx"><img style="height: 50px; width: 50px" src="../img/uhurunaumoja.png" alt=""/></a></li>
+                                          <li><a href="Default.aspx" style="font-size: 13px">Home</a></li>
+                                       
+                                           <li class="dropdown"> <a runat="server" id="a1" href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="Span1" runat="server" style="font-size: 13px">Child</span><b class="caret"></b></a>
+                                               <ul class="drop-down one-column hover-fade">
+                                                   <li><a runat="server" id="a2" href="ChildListNew.aspx"><span id="Span2" runat="server">Search Children</span></a></li>
+                                                   <li><a runat="server" id="a3" href="Child.aspx"><span id="Span3" runat="server">Register Child</span></a></li>
+                                                   <li><a runat="server" id="a4" href="FindDuplications.aspx"><span id="Span4" runat="server">Find Duplications</span></a></li>
+                                               </ul>
+                                           </li>
+
+                                           <li class="dropdown">
+                                               <a runat="server" id="a5" href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="Span5" runat="server" style="font-size: 13px">Immunization</span><b class="caret"></b></a>
+                                               <ul class="drop-down one-column-fade">
+                                                   <li><a runat="server" id="a6" href="MonthlyPlan.aspx"><span id="Span6" runat="server" style="font-size: 13px">Monthly Plan</span></a></li>
+                                                   <li><a runat="server" id="a7" href="HealthFacilityListForRegister.aspx"><span id="Span7" runat="server">Vaccination Register</span></a></li>
+                                                   <li><a runat="server" id="a8" href="SearchImmunizationCard.aspx"><span id="Span8" runat="server">Immunization Card</span></a></li>
+                                                   <li><a runat="server" id="a9" href="HealthFacilityListForBalance.aspx"><span id="Span9" runat="server">Enter Population Data</span></a></li>
+                                               </ul>
+                                           </li>
+                                           <li class="dropdown">
+                                               <a runat="server" id="a10" href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="Span10" runat="server" style="font-size: 13px">Transfer Orders</span><b class="caret"></b></a>
+                                              <ul class="drop-down one-column-fade">
+                                                 <li><a runat="server" id="a11" href="TransferOrder.aspx" ><span id="Span11" runat="server">Transfer Orders</span></a></li>
+                                                 <li><a runat="server" id="a12" href="TransferOrderHeader.aspx"><span id="Span12" runat="server">New Transfer Order</span></a></li>
+                                             </ul>
+                                           </li>
+                                            <li class="dropdown">
+                                    <a runat="server" id="a13" href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="Span13" runat="server">Stock</span><b class="caret"></b></a>
+                                    <ul class="drop-down one-column-fade">
+                                         <li><a runat="server" id="a14" href="HealthFacilityListForBalanceByLot.aspx" ><span id="Span14" runat="server">Current Stock</span></a></li>
+                                         <li><a runat="server" id="a15" href="StockCount.aspx"><span id="Span15" runat="server">Stock Count</span></a></li>
+                                        <li><a runat="server" id="a16" href="Adjustment.aspx"><span id="Span16" runat="server" >Make an Adjustment</span></a></li>
+                                        <li><a runat="server" id="a17" href="ItemLotListNew.aspx"><span id="Span17" runat="server">Item Lots</span></a></li>
+                                         <li><a runat="server" id="a18" href="ItemManufacturerList.aspx"><span id="Span18" runat="server">GTINs</span></a></li>
+                                        <li><a runat="server" id="a19" href="GtinHFStockPolicy.aspx"><span id="Span19" runat="server">Stock Policy</span></a></li>
+                                         <li><a runat="server" id="a20" href="RivoReceipt.aspx" ><span id="Span20" runat="server">Receive Stock</span></a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a runat="server" id="a21" href="Report.aspx"><span id="Span21" runat="server" style="font-size: 13px">Reports</span></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a runat="server" id="a22" href="Forms.aspx"><span id="Span22" runat="server" style="font-size: 13px">Forms</span></a>
+                                    <%--  <ul class="dropdown-menu">
+                                        <li><a runat="server" id="aImmunizationReports" href="ImmunizationReports.aspx"><span runat="server" id="mImmunizationReports">Immunization Reports</span></a></li>
+                                        <%--                                                <li><a runat="server" id="aCohortCoverageReport" href="HealthFacilityListForCohort.aspx" tabindex="-1"><span id="mCohortCoverageReport" runat="server">Cohort Coverage Report</span></a></li>
+                                                <li><a runat="server" id="aActivityReport" href="HealthFacilityListForActivity.aspx" tabindex="-1"><span id="mActivityReport" runat="server">Vaccination Activity Report</span></a></li>
+                                        <li><a runat="server" id="aStockBalanceReports" href="StockBalanceReports.aspx" tabindex="-1"><span runat="server" id="mStockBalanceReports">Stock Balance Reports</span></a></li>
+                                        <li><a runat="server" id="aStockReports" href="StockReports.aspx" tabindex="-1"><span runat="server" id="mStockReports">Stock Reports</span></a></li>
+                                    </ul>
+
+                                    <%--                                           <ul class="dropdown-menu">
+                                                <li><a runat="server" id="aRunningBalance" href="HealthFacilityListForRunningBalance.aspx" tabindex="-1"><span id="mRunningBalance" runat="server">Running Balance</span></a></li>
+                                                <li><a runat="server" id="aItemInHealthFacility" href="ItemBalanceInHealthFacilities.aspx"><span id="mItemInHealthFacility" runat="server">Item Balance in H.Facilities</span></a></li>
+                                                <li><a runat="server" id="aItemLotInHealthFacility" href="ItemLotBalanceInHealthFacilities.aspx"><span id="mItemLotInHealthFacility" runat="server">Item Lot Balance in H.Facilities</span></a></li>
+                                                <li><a runat="server" id="aStockCountList" href="HealthFacilityListForStockCount.aspx"><span id="mStockCountList" runat="server">View Stock Counts</span></a></li>
+                                                <li><a runat="server" id="aAdjustmentsList" href="HealtFacilityListForAdjustments.aspx"><span id="mAdjustmentsList" runat="server">View Adjustments</span></a></li>
+                                            </ul>--%>
+                                </li>
+                                <li class="dropdown">
+                                    <a runat="server" id="a23" href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="Span23" runat="server" style="font-size: 13px">Tally Sheets</span><b class="caret"></b></a>
+                                    <ul class="drop-down one-column-fade">
+                                        <li><a runat="server" id="A24" href="WeightTally.aspx"><span id="Span24" runat="server">Weigh Tally</span></a></li>
+                                        <li><a runat="server" id="A25" href="StockTally.aspx"><span id="Span25" runat="server">Stock Tally</span></a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a runat="server" id="a26" href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="Span26" runat="server" style="font-size: 13px">Setup</span><b class="caret"></b></a>
+                                    <ul class="drop-down one-column-fade">
+                                        <li><a runat="server" id="a27" href="HealthFacilityList.aspx"><span id="Span27" runat="server">Health Facilities</span></a></li>
+                                        <li><a runat="server" id="a28" href="PlaceList.aspx"><span id="Span28" runat="server">Places</span></a></li>
+                                        <li><a runat="server" id="a29" href="Birthplace.aspx"><span id="Span29" runat="server">Birthplaces</span></a></li>
+                                        <li><a runat="server" id="a30" href="CommunityList.aspx"><span id="Span30" runat="server">Communities</span></a></li>
+                                       <li><a runat="server" id="a31" href="HealthFacilityType.aspx"><span id="Span31" runat="server">Health Facility Type</span></a></li>
+                                         <li class="divider"></li>
+                                        <li><a runat="server" id="a32" href="ItemList.aspx"><span id="Span32" runat="server">Items</span></a></li>
+                                        <li><a runat="server" id="a33" href="ManufacturerList.aspx"><span id="Span33" runat="server">Manufacturers</span></a></li>
+                                        <li><a runat="server" id="a34" href="AdjustmentReason.aspx"><span id="Span34" runat="server">Adjustment Reasons</span></a></li>
+                                         <li><a runat="server" id="a35" href="Uom.aspx"><span id="Span35" runat="server">Units of Measure</span></a></li>
+                                        <li class="divider"></li>
+                                        <li><a runat="server" id="a36" href="UserList.aspx"><span id="Span36" runat="server">Users</span></a></li>
+                                        <li><a runat="server" id="a37" href="Role.aspx"><span id="Span37" runat="server">Roles</span></a></li>
+                                        <li><a runat="server" id="a38" href="RoleAction.aspx"><span id="Span38" runat="server">Assign Actions to Role</span></a>
+                                        </li>
+                                        <%-- <li><a runat="server" id="aUserManagement" href="#"><span id="mUserManagement" runat="server">User Management</span></a></li>--%>
+                                        <%--                                            <a runat="server" id="aAssignRoletoUser" href="UserRole.aspx"><span id="mAssignRoletoUser" runat="server">Assign Role to User</span></a>--%>
+                                    </ul>
+                                </li>
+                                 <li class="dropdown">
+                                    <a runat="server" id="a39" href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="Span39" runat="server" style="font-size: 13px">Vaccination Schedule</span><b class="caret"></b></a>
+                                    <ul class="drop-down one-column-fade">
+                                        <li><a runat="server" id="a40" href="ScheduledVaccinationList.aspx"><span id="Span40" runat="server">Scheduled Vaccinations</span></a></li>
+                                        <li><a runat="server" id="a41" href="AgeDefinitions.aspx"><span id="Span41" runat="server">Age Definitions</span></a></li>
+                                        <li><a runat="server" id="a42" href="DoseList.aspx"><span id="Span42" runat="server">Doses</span></a></li>
+                                        <li><a runat="server" id="a43" href="NonvaccinationReason.aspx"><span id="Span43" runat="server">Non Vaccination Reasons</span></a></li>
+                                    </ul>
+                                </li>
+
+
+                                     <li class="dropdown">
+                                    <a runat="server" id="a44" href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="Span44" runat="server" style="font-size: 13px">Configuration</span><b class="caret"></b></a>
+                                    <ul class="drop-down one-column-fade">
+
+                                        <li><a runat="server" id="a45" href="Configuration.aspx"><span id="Span45" runat="server">Global Configurations</span></a></li>
+                                        <li><a runat="server" id="a46" href="ChildConfiguration.aspx"><span id="Span46" runat="server">Child Configuration</span></a></li>
+                                        <li><a runat="server" id="a47" href="Help.aspx"><span id="Span47" runat="server">Help</span></a></li>
+                                        <li class="divider"></li>
+                                        <li><a runat="server" id="a48" href="Language.aspx"><span id="Span48" runat="server">Languages</span></a></li>
+                                        <li><a runat="server" id="a49" href="WordTranslate.aspx"><span id="Span49" runat="server">Translation</span></a></li>
+                                        <li class="divider"></li>
+                                        <li><a runat="server" id="a50" href="ItemCategory.aspx"><span id="Span50" runat="server">Item Categories</span></a></li>
+                                        <li><a runat="server" id="a51" href="SystemModule.aspx"><span id="Span51" runat="server">System Modules</span></a></li>
+                                    </ul>
+                                </li>
+
+                                       </ul>
+                                   </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                         
+
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <!--      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <%--  <li><a href="Default.aspx"><span class="glyphicon glyphicon-home"></span> Home</a></li>--%>
                                 <li class="dropdown">
@@ -182,7 +394,7 @@
 
                             </ul>
 
-                        </div>
+                        </div> -->
                         <!-- /.navbar-collapse -->
                     </div>
                     <!-- /.container-fluid -->
@@ -191,11 +403,11 @@
             <!--/Menu Container-->
 
             <div class="row">
-                <div class="col-md-9 col-xs-9 col-sm-9 col-lg-9">
+                <div class="col m9 x9 s9 l9">
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
-                <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3">
+                <div class="col m3 x3 s3 l3">
                     <giis:LoggedUser ID="LoggedUser1" runat="server" />
                    <%-- <giis:LogIn ID="LogIn1" runat="server" />--%>
                     <br />
@@ -221,6 +433,7 @@
         </div>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <%--  <script type="text/javascript" src="../js/AutoCompletescript.js"></script>--%>
         <script type="text/javascript" src="../js/bootstrap.min.js"></script>
