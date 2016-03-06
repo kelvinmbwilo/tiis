@@ -1,16 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GIIS.DataLayer", "GIIS.DataLayer\GIIS.DataLayer.csproj", "{241F7080-2919-4084-AD56-DACFD85DD65E}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "GIIS.Website", "http://localhost:15043", "{B42FB531-9F3C-4871-B578-675C57943A52}"
 	ProjectSection(WebsiteProperties) = preProject
-		SccProjectName = "SAK"
-		SccAuxPath = "SAK"
-		SccLocalPath = "SAK"
-		SccProvider = "SAK"
+		SccProjectName = ""
+		SccAuxPath = ""
+		SccLocalPath = ""
+		SccProvider = ""
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		ProjectReferences = "{241f7080-2919-4084-ad56-dacfd85dd65e}|GIIS.DataLayer.dll;{f2a29378-fea6-4064-ba43-a6a06c6981cf}|GIIS.BusinessLogic.dll;"

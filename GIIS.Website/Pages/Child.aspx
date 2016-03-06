@@ -18,7 +18,9 @@
 <%@ Page Title="Child" Language="C#" MasterPageFile="~/Pages/MasterPage.master" AutoEventWireup="true" CodeFile="Child.aspx.cs" Inherits="_Child" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="row">
+    
+    <!-- Tunafunga div ya Bootstrap itakayodirect kwenye Home Page-->
+   <!-- <div class="row">
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
             <ol class="breadcrumb">
                 <li><a href="Default.aspx">Home</a></li>
@@ -27,7 +29,7 @@
                     <asp:Label ID="lblTitle" runat="server" Text="Child" /></li>
             </ol>
         </div>
-    </div>
+    </div>  -->
     <%-- <div class="row">
         <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix">
         </div>
@@ -360,191 +362,137 @@
         </div>
     </div>--%>
 
-    <div class="row">
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblSystemId" runat="server" Text="SystemId" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtSystemId" runat="server" CssClass="form-control" Enabled="false" BackColor="#f3f3f3" />
-            </div>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblBarcodeID" runat="server" Text="Barcode ID" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtBarcodeId" runat="server" CssClass="form-control" />
-            </div>
-        </div>
+      <!-- Child Information Hii Hapa! -->
+     
+      <div class="row" style="padding-left: 50px !important; padding-right: 50px !important;">
+          <div class="card">
+              <div class="card-content">
+                  <span class="card-title"> Child Information </span>
+                  <!-- Row Start Here! -->
+                  <div class="row row-sm">
+                    
+                      <div class="col m12">
+                          <div class="col m4">
+                              <asp:Label ID="lblSystemId" runat="server" Text="SystemId" />
+                               <asp:TextBox ID="txtSystemId" runat="server" CssClass="form-control" Enabled="false" BackColor="#f3f3f3" />
+                          </div>
+                          <div class="col m4 offset-s3">
+                               <asp:Label ID="lblBarcodeID" runat="server" Text="Barcode ID" />
+                                <asp:TextBox ID="txtBarcodeId" runat="server" CssClass="form-control" />                  
+                          </div>
+                          <div class="col m4">
+                             <asp:Label ID="lblMotherFirstname" runat="server" Text="MotherFirstname" />
+                             <span id="spanMotherFirstname" runat="server" style="color: Red">*</span>
+                               <asp:TextBox ID="txtMotherFirstname" runat="server" CssClass="form-control" />
+                          </div>
+                          <div class="col m4 col offset-s4">
+                               <asp:Label ID="lblMotherLastname" runat="server" Text="MotherLastname" />
+                               <span id="spanMotherLastname" runat="server" style="color: Red">*</span>
+                                <asp:TextBox ID="txtMotherLastname" runat="server" CssClass="form-control" />
+                          </div>
+                          <div class="col m4 offset-s4">
+                             <asp:Label ID="lblFirstname1" runat="server" Text="Firstname" />
+                             <span id="spanFirstname1" runat="server" style="color: Red">*</span>
+                              <asp:TextBox ID="txtFirstname1" runat="server" CssClass="form-control" />
+                          </div>
+                          <div class="col m4 col offset-s4">
+                             <asp:Label ID="lblLastname1" runat="server" Text="Lastname" />
+                             <span id="spanLastname1" runat="server" style="color: Red">*</span>
+                             <asp:TextBox ID="txtLastname1" runat="server" CssClass="form-control" />
+                          </div>
+                          <div class="col m4 offset-s4">
+                              <asp:Label ID="lblFirstname2" runat="server" Text="Second name" />                                  
+                                <asp:TextBox ID="txtFirstname2" runat="server" CssClass="form-control" />
+                          </div>
+                          <div class="col m4 offset-s4">
+                              <asp:Label ID="lblBirthdate" runat="server" Text="Birthdate" />
+                             <span id="spanBirthdate" runat="server" style="color: Red">*</span>
+                               <asp:TextBox ID="txtBirthdate" runat="server" CssClass="input-field" />
+                               <ajaxToolkit:CalendarExtender ID="ceBirthdate" runat="server" TargetControlID="txtBirthdate" />
+                              <asp:RegularExpressionValidator ID="revBirthdate" runat="server" ControlToValidate="txtBirthdate" ValidationGroup="saveChild" Display="Dynamic" CssClass="label label-danger" Font-Size="Small" ForeColor="White" />
 
-    </div>
-       <div class="row">
+                          </div>
+                          <div class="col m2 offset-s4">
+                            <asp:Label ID="lblGender" runat="server" Text="Gender" />
+                            <span id="Span1" runat="server" style="color: Red">*</span>
+                            <asp:RadioButtonList ID="rblGender" runat="server" RepeatDirection="Horizontal">
+                               <asp:ListItem Value="True" Text="Male"></asp:ListItem>
+                               <asp:ListItem Value="False" Text="Female"></asp:ListItem>
+                            </asp:RadioButtonList>
+                          </div>
+                          <div class="col m4">
+                              <asp:Label ID="lblBirthplaceId" runat="server" Text="BirthplaceId" />
+                              <span id="spanBirthplaceId" runat="server" style="color: Red">*</span>
 
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblMotherFirstname" runat="server" Text="MotherFirstname" />
-            <span id="spanMotherFirstname" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtMotherFirstname" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblMotherLastname" runat="server" Text="MotherLastname" />
-            <span id="spanMotherLastname" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtMotherLastname" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblFirstname1" runat="server" Text="Firstname" />
-            <span id="spanFirstname1" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtFirstname1" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblLastname1" runat="server" Text="Lastname1" />
-            <span id="spanLastname1" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtLastname1" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-    </div>
-  <div class="row">
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblFirstname2" runat="server" Text="Second name" />
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtFirstname2" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblBirthdate" runat="server" Text="Birthdate" />
-            <span id="spanBirthdate" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtBirthdate" runat="server" CssClass="form-control" />
-                <ajaxToolkit:CalendarExtender ID="ceBirthdate" runat="server" TargetControlID="txtBirthdate" />
-                <asp:RegularExpressionValidator ID="revBirthdate" runat="server" ControlToValidate="txtBirthdate" ValidationGroup="saveChild" Display="Dynamic" CssClass="label label-danger" Font-Size="Small" ForeColor="White" />
-
-            </div>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblGender" runat="server" Text="Gender" />
-            <span id="Span1" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:RadioButtonList ID="rblGender" runat="server" RepeatDirection="Horizontal">
-                    <asp:ListItem Value="True" Text="Male"></asp:ListItem>
-                    <asp:ListItem Value="False" Text="Female"></asp:ListItem>
-                </asp:RadioButtonList>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblBirthplaceId" runat="server" Text="BirthplaceId" />
-            <span id="spanBirthplaceId" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <%--<uc3:BirthplacesTextbox ID="txtBirthplaceId" runat="server" ClearAfterSelect="false" HighlightResults="true" OnClickSubmit="true" OnValueSelected="Places_ValueSelected" ServiceMethod="BirthPlace" />--%>
-                <asp:DropDownList ID="ddlBirthplace" runat="server" DataSourceID="odsBirthplace" DataTextField="Name" DataValueField="Id" CssClass="form-control" />
-                <asp:ObjectDataSource ID="odsBirthplace" runat="server" SelectMethod="GetBirthplaceListNew" TypeName="GIIS.DataLayer.Birthplace"></asp:ObjectDataSource>
-            </div>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblDomicileId" runat="server" Text="DomicileId" />
-            <span id="spanDomicileId" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <uc4:DomicileTextbox ID="txtDomicileId"
-                    runat="server" ClearAfterSelect="false"
-                    HighlightResults="true" OnClickSubmit="true"
-                    OnValueSelected="Domicile_ValueSelected"
-                    ServiceMethod="Place" />
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblHealthcenterId" runat="server" Text="HealthcenterId" />
-            <span id="spanHealthcenterId" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <uc1:AutoCompleteTextbox runat="server"
+                               <asp:DropDownList ID="ddlBirthplace" runat="server" DataSourceID="odsBirthplace" DataTextField="Name" DataValueField="Id" CssClass="input-field" />
+                               <asp:ObjectDataSource ID="odsBirthplace" runat="server" SelectMethod="GetBirthplaceListNew" TypeName="GIIS.DataLayer.Birthplace"></asp:ObjectDataSource>
+                          </div>
+                          <div class="col m4 offset-s4">
+                              <asp:Label ID="lblDomicileId" runat="server" Text="DomicileId" />
+                             <span id="spanDomicileId" runat="server" style="color: Red">*</span>
+                               <uc4:DomicileTextbox ID="txtDomicileId"
+                                runat="server" ClearAfterSelect="false"
+                                HighlightResults="true" OnClickSubmit="true"
+                                OnValueSelected="Domicile_ValueSelected"
+                                ServiceMethod="Place" />
+                          </div>
+                          <div class="col m4 offset-s4">
+                              <asp:Label ID="lblHealthcenterId" runat="server" Text="HealthcenterId" />
+                              <span id="spanHealthcenterId" runat="server" style="color: Red">*</span>
+                               <uc1:AutoCompleteTextbox runat="server"
                     ID="txtHealthcenterId"
                     OnClickSubmit="true"
                     ServiceMethod="VaccinationPoints"
                     HighlightResults="true"
                     ClearAfterSelect="false" OnValueSelected="HealthCenters_ValueSelected" />
-            </div>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblCommunityId" runat="server" Text="CommunityId" />
-            <span id="spanCommunityId" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <uc2:CommunitiesTextbox ID="txtCommunityId"
-                    runat="server" ClearAfterSelect="false"
-                    HighlightResults="true" OnClickSubmit="true"
-                    OnValueSelected="Communities_ValueSelected"
-                    ServiceMethod="Community" />
-            </div>
-        </div>
-    </div>
+                          </div>
+
+                          <div class="col m4 offset-s4">
+                                 <asp:Label ID="lblCommunityId" runat="server" Text="CommunityId" />
+                                 <span id="spanCommunityId" runat="server" style="color: Red">*</span>
+                               <uc2:CommunitiesTextbox ID="txtCommunityId"
+                               runat="server" ClearAfterSelect="false"
+                               HighlightResults="true" OnClickSubmit="true"
+                               OnValueSelected="Communities_ValueSelected"
+                               ServiceMethod="Community" />
+                          </div>
+                          <div class="col m4 offset-s4">
+                              <asp:Label ID="lblStatusId" runat="server" Text="StatusId" />
+                              <asp:DropDownList ID="ddlStatus" runat="server" DataSourceID="odsStatus" DataTextField="Name" DataValueField="Id" CssClass="form-control" />
+                              <asp:ObjectDataSource ID="odsStatus" runat="server" SelectMethod="GetStatusForList" TypeName="GIIS.DataLayer.Status"></asp:ObjectDataSource>
+                          </div>
+                          <div class="col m4 offset-s4">
+                               <asp:Label ID="lblPhone" runat="server" Text="Phone" />
+                              <span id="spanPhone" runat="server" style="color: Red">*</span>
+                              <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" />
+                          </div>
+                          <div class="col m4 offset-s4">
+                             <asp:Label ID="lblNotes" runat="server" Text="Notes" />
+                            <span id="spanNotes" runat="server" style="color: Red">*</span>
+                            <asp:TextBox ID="txtNotes" runat="server" CssClass="form-control" />
+                          </div>
+                          <div class="col m4 offset-s4">
+                               <asp:Button ID="btnAdd" runat="server" Text="Save" CssClass="btn btn-primary btn-raised" OnClick="btnAdd_Click" OnClientClick="if (!checkHFacility()) return false;" ValidationGroup="saveChild" />
+            <asp:Button ID="btnEdit" runat="server" Text="Save" CssClass="btn btn-primary btn-raised" OnClick="btnEdit_Click" OnClientClick="if (!checkHFacility()) return false;" ValidationGroup="saveChild" />
+                                 <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" />
+                          </div>
+                      </div>
+                          
+                    </div>
+                  </div>
+              </div>
+          </div>
+      
+         
+ 
+   
     <div class="row">
         <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblStatusId" runat="server" Text="StatusId" />
+          
         </div>
         <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
             <div class="form-group">
-                <asp:DropDownList ID="ddlStatus" runat="server" DataSourceID="odsStatus" DataTextField="Name" DataValueField="Id" CssClass="form-control" />
-                <asp:ObjectDataSource ID="odsStatus" runat="server" SelectMethod="GetStatusForList" TypeName="GIIS.DataLayer.Status"></asp:ObjectDataSource>
-
-            </div>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblPhone" runat="server" Text="Phone" />
-            <span id="spanPhone" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtPhone" runat="server" CssClass="form-control" />
-            </div>
-        </div>
-
-    </div>
-    <div class="row">
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <asp:Label ID="lblNotes" runat="server" Text="Notes" />
-            <span id="spanNotes" runat="server" style="color: Red">*</span>
-        </div>
-        <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
-            <div class="form-group">
-                <asp:TextBox ID="txtNotes" runat="server" CssClass="form-control" />
+                
             </div>
         </div>
         <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
@@ -608,7 +556,7 @@
             </div>
             <div class="col-md-3 col-xs-3 col-sm-3 col-lg-3 clearfix">
                 <div class="form-group">
-                    <asp:TextBox ID="txtAddress" runat="server" CssClass="form-control" />
+                 
                 </div>
             </div>
         </asp:Panel>
@@ -656,8 +604,7 @@
         </div>
         <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 clearfix">&nbsp;</div>
         <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">
-            <asp:Button ID="btnAdd" runat="server" Text="Save" CssClass="btn btn-primary btn-raised" OnClick="btnAdd_Click" OnClientClick="if (!checkHFacility()) return false;" ValidationGroup="saveChild" />
-            <asp:Button ID="btnEdit" runat="server" Text="Save" CssClass="btn btn-primary btn-raised" OnClick="btnEdit_Click" OnClientClick="if (!checkHFacility()) return false;" ValidationGroup="saveChild" />
+           
         </div>
         <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix">&nbsp;</div>
         <div class="col-md-2 col-xs-2 col-sm-2 col-lg-2 clearfix">

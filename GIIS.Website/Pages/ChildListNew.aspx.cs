@@ -228,7 +228,8 @@ public partial class Pages_ChildListNew : System.Web.UI.Page
             }
         }
 
-        Response.Redirect("ChildListNewSearch.aspx");
+       Response.Redirect("ChildListNewSearch.aspx");
+        
     }
 
     protected void ClearSession() 

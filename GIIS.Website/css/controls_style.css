@@ -1,6 +1,6 @@
 /*==================TEXT BOX INPUT GLOW==================*/
 input{
-font-size:12px;
+font-size:14px;
 font-family: Arial;
 }
 
@@ -92,7 +92,7 @@ display:block;
 {
 margin-left:5px;
 color: #333 !important;
-min-width: 165px !important;
+min-width: 200px !important;
 max-width:100%;
 font-size:12px;
 outline:none;
@@ -215,22 +215,7 @@ box-shadow: 0 0 15px #6678b1;
 
 /*==================COMBOBOX BOX LANGUAGE ==================*/
 
-.combobox_language
-{    
-min-width:105px !important;
-font-size:12px;
-outline:none;
-transition: all 0.25s ease-in-out;
--webkit-transition: all 0.25s ease-in-out;
--moz-transition: all 0.25s ease-in-out;
-border-radius:3px;
--webkit-border-radius:3px;
--moz-border-radius:3px;
-border:solid 1px #6678b1;
-color:#333 !important;
-background-color:#fff;
-padding: 2px;
-}
+
 
 .combobox_language:hover
 {

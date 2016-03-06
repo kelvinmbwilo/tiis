@@ -19,7 +19,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="row">
+  <!--  <div class="row">
         <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12 clearfix">
             <ol class="breadcrumb">
                 <li><a href="Default.aspx">Home</a></li>
@@ -28,7 +28,7 @@
                     <asp:Label ID="lblTitle" runat="server" Text="Header" /></li>
             </ol>
         </div>
-    </div>
+    </div> -->
     <div class="row">
         <div class="col-md-1 col-xs-1 col-sm-1 col-lg-1 clearfix">
         </div>

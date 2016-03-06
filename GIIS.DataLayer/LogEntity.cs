@@ -88,10 +88,10 @@ namespace GIIS.DataLayer
                 int inserted = Insert(o);
                 return inserted;
             }
-            catch (Exception ex)
+          catch (Exception ex )
             {
-                throw ex;
-            }
+                throw  ex;
+         }
         }
     }
 }
